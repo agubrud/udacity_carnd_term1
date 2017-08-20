@@ -14,8 +14,8 @@ The goals / steps of this project are the following:
 [//]: # (Image References)
 
 [image1]: ./examples/visualization.jpg "Visualization"
-[class_decomp]: ./visuals/Class_Decomposition.jpg "Class Decomposition"
-[class_decomp_chart]: ./visuals/Class_Decomposition_Chart.jpg "Class Decomposition Chart"
+[class_decomp]: ./visuals/Class_Decomposition.JPG "Class Decomposition"
+[class_decomp_chart]: ./visuals/Class_Decomposition_Chart.JPG "Class Decomposition Chart"
 [dataset_accuracy]: ./visuals/Train_Val_Test.JPG "Dataset Accuracy"
 [image2]: ./examples/grayscale.jpg "Grayscaling"
 [image3]: ./examples/random_noise.jpg "Random Noise"
