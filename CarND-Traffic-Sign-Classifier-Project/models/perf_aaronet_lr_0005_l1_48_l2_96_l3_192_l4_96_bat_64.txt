@@ -1,0 +1,980 @@
+Training on 34799 examples...
+
+error: 577.402710
+error: 46.489330
+error: 22.989372
+error: 17.718616
+error: 12.606874
+error: 9.172243
+error: 8.382396
+error: 7.686130
+error: 6.472450
+error: 3.939651
+error: 5.222085
+EPOCH 1 ...
+Validation Accuracy = 0.248
+
+error: 4.923387
+error: 3.307233
+error: 3.956646
+error: 3.339472
+error: 3.943290
+error: 4.178000
+error: 3.799823
+error: 3.042491
+error: 3.501504
+error: 2.913643
+error: 2.418935
+EPOCH 2 ...
+Validation Accuracy = 0.395
+
+error: 2.267680
+error: 2.755601
+error: 2.543077
+error: 2.143639
+error: 2.491469
+error: 2.538984
+error: 2.275658
+error: 2.369735
+error: 1.800392
+error: 1.291947
+error: 2.097307
+EPOCH 3 ...
+Validation Accuracy = 0.490
+
+error: 1.084908
+error: 2.135471
+error: 1.376823
+error: 1.556832
+error: 1.592339
+error: 1.573750
+error: 1.287978
+error: 1.592989
+error: 1.063258
+error: 1.158877
+error: 1.155554
+EPOCH 4 ...
+Validation Accuracy = 0.579
+
+error: 1.071346
+error: 1.055043
+error: 0.662320
+error: 1.006811
+error: 1.126807
+error: 0.816471
+error: 1.035741
+error: 0.837276
+error: 0.736708
+error: 0.771050
+error: 1.087640
+EPOCH 5 ...
+Validation Accuracy = 0.631
+
+error: 0.868527
+error: 0.762388
+error: 1.001628
+error: 0.989015
+error: 0.929986
+error: 0.922813
+error: 0.752602
+error: 0.865120
+error: 0.611567
+error: 0.678151
+error: 0.759054
+EPOCH 6 ...
+Validation Accuracy = 0.674
+
+error: 0.618675
+error: 0.432956
+error: 0.906982
+error: 0.910482
+error: 0.383927
+error: 0.609905
+error: 0.315436
+error: 0.575824
+error: 0.575524
+error: 0.515811
+error: 0.356824
+EPOCH 7 ...
+Validation Accuracy = 0.717
+
+error: 0.633894
+error: 0.288435
+error: 0.346847
+error: 0.268215
+error: 0.518669
+error: 0.809999
+error: 0.456621
+error: 0.734831
+error: 0.515124
+error: 0.723479
+error: 0.491430
+EPOCH 8 ...
+Validation Accuracy = 0.750
+
+error: 0.663177
+error: 0.377264
+error: 0.288070
+error: 0.277259
+error: 0.504712
+error: 0.478753
+error: 0.207512
+error: 0.584067
+error: 0.337955
+error: 0.281036
+EPOCH 9 ...
+Validation Accuracy = 0.784
+
+error: 0.389853
+error: 0.238857
+error: 0.344581
+error: 0.377498
+error: 0.291945
+error: 0.179916
+error: 0.660644
+error: 0.620452
+error: 0.640746
+error: 0.331257
+error: 0.158899
+EPOCH 10 ...
+Model saved: ./aaronet_lr_0005_l1_48_l2_96_l3_192_l4_96_e_10_bat_64
+Validation Accuracy = 0.809
+
+error: 0.637597
+error: 0.442245
+error: 0.278077
+error: 0.404981
+error: 0.723388
+error: 0.354233
+error: 0.339882
+error: 0.074015
+error: 0.129610
+error: 0.125830
+error: 0.361507
+EPOCH 11 ...
+Validation Accuracy = 0.814
+
+error: 0.213883
+error: 0.332673
+error: 0.156860
+error: 0.486791
+error: 0.250168
+error: 0.404672
+error: 0.207079
+error: 0.086556
+error: 0.554320
+error: 0.221645
+error: 0.117756
+EPOCH 12 ...
+Validation Accuracy = 0.832
+
+error: 0.324995
+error: 0.172766
+error: 0.285426
+error: 0.365459
+error: 0.061732
+error: 0.171362
+error: 0.403095
+error: 0.321047
+error: 0.097690
+error: 0.429431
+error: 0.297799
+EPOCH 13 ...
+Validation Accuracy = 0.827
+
+error: 0.022067
+error: 0.257923
+error: 0.178015
+error: 0.132387
+error: 0.335390
+error: 0.163551
+error: 0.334352
+error: 0.542437
+error: 0.137455
+error: 0.093322
+error: 0.344842
+EPOCH 14 ...
+Validation Accuracy = 0.849
+
+error: 0.089457
+error: 0.242439
+error: 0.207762
+error: 0.189743
+error: 0.067341
+error: 0.238394
+error: 0.040577
+error: 0.643322
+error: 0.097741
+error: 0.168251
+error: 0.269300
+EPOCH 15 ...
+Validation Accuracy = 0.851
+
+error: 0.262863
+error: 0.057783
+error: 0.093455
+error: 0.122518
+error: 0.162758
+error: 0.107247
+error: 0.152898
+error: 0.089745
+error: 0.039428
+error: 0.221942
+error: 0.050394
+EPOCH 16 ...
+Validation Accuracy = 0.864
+
+error: 0.160020
+error: 0.127002
+error: 0.045851
+error: 0.111545
+error: 0.037586
+error: 0.037305
+error: 0.230124
+error: 0.036264
+error: 0.002875
+error: 0.045502
+EPOCH 17 ...
+Validation Accuracy = 0.857
+
+error: 0.075070
+error: 0.031332
+error: 0.010619
+error: 0.055865
+error: 0.040297
+error: 0.098712
+error: 0.047896
+error: 0.013914
+error: 0.123860
+error: 0.112285
+error: 0.154506
+EPOCH 18 ...
+Validation Accuracy = 0.866
+
+error: 0.021051
+error: 0.002101
+error: 0.027086
+error: 0.046304
+error: 0.023932
+error: 0.016194
+error: 0.064688
+error: 0.121691
+error: 0.031225
+error: 0.394759
+error: 0.069298
+EPOCH 19 ...
+Validation Accuracy = 0.874
+
+error: 0.155304
+error: 0.080963
+error: 0.077771
+error: 0.017402
+error: 0.230877
+error: 0.083883
+error: 0.064459
+error: 0.101369
+error: 0.055230
+error: 0.026690
+error: 0.077655
+EPOCH 20 ...
+Model saved: ./aaronet_lr_0005_l1_48_l2_96_l3_192_l4_96_e_20_bat_64
+Validation Accuracy = 0.880
+
+error: 0.019828
+error: 0.024233
+error: 0.188605
+error: 0.036806
+error: 0.014339
+error: 0.009448
+error: 0.236081
+error: 0.019248
+error: 0.201775
+error: 0.015872
+error: 0.214434
+EPOCH 21 ...
+Validation Accuracy = 0.876
+
+error: 0.131547
+error: 0.358956
+error: 0.107338
+error: 0.042547
+error: 0.011636
+error: 0.157624
+error: 0.050511
+error: 0.042709
+error: 0.136631
+error: 0.106122
+error: 0.143563
+EPOCH 22 ...
+Validation Accuracy = 0.868
+
+error: 0.032536
+error: 0.085340
+error: 0.188673
+error: 0.064043
+error: 0.092311
+error: 0.024463
+error: 0.069486
+error: 0.070153
+error: 0.086013
+error: 0.033477
+error: 0.004163
+EPOCH 23 ...
+Validation Accuracy = 0.866
+
+error: 0.239740
+error: 0.104269
+error: 0.176544
+error: 0.104756
+error: 0.112028
+error: 0.004086
+error: 0.044659
+error: 0.095808
+error: 0.019734
+error: 0.066115
+error: 0.067452
+EPOCH 24 ...
+Validation Accuracy = 0.882
+
+error: 0.115345
+error: 0.017125
+error: 0.056967
+error: 0.269917
+error: 0.021407
+error: 0.003476
+error: 0.061128
+error: 0.025808
+error: 0.014994
+error: 0.002266
+EPOCH 25 ...
+Validation Accuracy = 0.893
+
+error: 0.082489
+error: 0.118523
+error: 0.029436
+error: 0.059461
+error: 0.060505
+error: 0.057032
+error: 0.013285
+error: 0.237256
+error: 0.005952
+error: 0.001114
+error: 0.083764
+EPOCH 26 ...
+Validation Accuracy = 0.884
+
+error: 0.032675
+error: 0.018751
+error: 0.110834
+error: 0.044919
+error: 0.086438
+error: 0.162585
+error: 0.171725
+error: 0.044322
+error: 0.163998
+error: 0.192757
+error: 0.240500
+EPOCH 27 ...
+Validation Accuracy = 0.897
+
+error: 0.407505
+error: 0.120937
+error: 0.016549
+error: 0.154196
+error: 0.012556
+error: 0.059124
+error: 0.036208
+error: 0.137713
+error: 0.001566
+error: 0.010292
+error: 0.060737
+EPOCH 28 ...
+Validation Accuracy = 0.900
+
+error: 0.056979
+error: 0.168683
+error: 0.064725
+error: 0.061112
+error: 0.002377
+error: 0.093673
+error: 0.046257
+error: 0.075954
+error: 0.018957
+error: 0.008577
+error: 0.079426
+EPOCH 29 ...
+Validation Accuracy = 0.905
+
+error: 0.128076
+error: 0.167049
+error: 0.111435
+error: 0.005876
+error: 0.005247
+error: 0.008925
+error: 0.066237
+error: 0.107287
+error: 0.070242
+error: 0.022239
+error: 0.006543
+EPOCH 30 ...
+Model saved: ./aaronet_lr_0005_l1_48_l2_96_l3_192_l4_96_e_30_bat_64
+Validation Accuracy = 0.884
+
+error: 0.089660
+error: 0.001094
+error: 0.016346
+error: 0.059464
+error: 0.004312
+error: 0.007052
+error: 0.068771
+error: 0.066154
+error: 0.119063
+error: 0.001076
+error: 0.095842
+EPOCH 31 ...
+Validation Accuracy = 0.888
+
+error: 0.079624
+error: 0.203244
+error: 0.303062
+error: 0.002462
+error: 0.206114
+error: 0.059619
+error: 0.009700
+error: 0.118813
+error: 0.047445
+error: 0.000176
+error: 0.127582
+EPOCH 32 ...
+Validation Accuracy = 0.897
+
+error: 0.004720
+error: 0.007494
+error: 0.001095
+error: 0.003736
+error: 0.051511
+error: 0.075131
+error: 0.154316
+error: 0.075769
+error: 0.008415
+error: 0.218476
+error: 0.223201
+EPOCH 33 ...
+Validation Accuracy = 0.896
+
+error: 0.006715
+error: 0.059426
+error: 0.003275
+error: 0.051232
+error: 0.002427
+error: 0.001719
+error: 0.008017
+error: 0.002712
+error: 0.059975
+error: 0.012401
+EPOCH 34 ...
+Validation Accuracy = 0.898
+
+error: 0.018464
+error: 0.016293
+error: 0.004464
+error: 0.023007
+error: 0.059662
+error: 0.004040
+error: 0.061015
+error: 0.000284
+error: 0.362764
+error: 0.161736
+error: 0.131300
+EPOCH 35 ...
+Validation Accuracy = 0.906
+
+error: 0.000192
+error: 0.181850
+error: 0.063500
+error: 0.092991
+error: 0.068532
+error: 0.135497
+error: 0.005840
+error: 0.237387
+error: 0.569778
+error: 0.000585
+error: 0.000892
+EPOCH 36 ...
+Validation Accuracy = 0.917
+
+error: 0.000388
+error: 0.000087
+error: 0.003371
+error: 0.118487
+error: 0.063018
+error: 0.322473
+error: 0.080660
+error: 0.005339
+error: 0.013601
+error: 0.122704
+error: 0.000099
+EPOCH 37 ...
+Validation Accuracy = 0.905
+
+error: 0.118828
+error: 0.000263
+error: 0.002998
+error: 0.000815
+error: 0.077711
+error: 0.005592
+error: 0.088849
+error: 0.058926
+error: 0.063412
+error: 0.115652
+error: 0.019030
+EPOCH 38 ...
+Validation Accuracy = 0.897
+
+error: 0.003192
+error: 0.081055
+error: 0.040513
+error: 0.000025
+error: 0.028335
+error: 0.064173
+error: 0.045220
+error: 0.202280
+error: 0.048650
+error: 0.241637
+error: 0.018600
+EPOCH 39 ...
+Validation Accuracy = 0.903
+
+error: 0.000011
+error: 0.061002
+error: 0.011461
+error: 0.076559
+error: 0.058880
+error: 0.033897
+error: 0.000148
+error: 0.059378
+error: 0.104711
+error: 0.068269
+error: 0.069095
+EPOCH 40 ...
+Model saved: ./aaronet_lr_0005_l1_48_l2_96_l3_192_l4_96_e_40_bat_64
+Validation Accuracy = 0.913
+
+error: 0.036482
+error: 0.059344
+error: 0.306892
+error: 0.025413
+error: 0.000005
+error: 0.016602
+error: 0.000052
+error: 0.034482
+error: 0.000306
+error: 0.025618
+error: 0.058770
+EPOCH 41 ...
+Validation Accuracy = 0.915
+
+error: 0.000176
+error: 0.003846
+error: 0.059217
+error: 0.128039
+error: 0.000199
+error: 0.000027
+error: 0.005366
+error: 0.156383
+error: 0.062157
+error: 0.066878
+EPOCH 42 ...
+Validation Accuracy = 0.902
+
+error: 0.168865
+error: 0.031123
+error: 0.124263
+error: 0.000019
+error: 0.023604
+error: 0.001239
+error: 0.000076
+error: 0.101447
+error: 0.000043
+error: 0.000174
+error: 0.013502
+EPOCH 43 ...
+Validation Accuracy = 0.902
+
+error: 0.001611
+error: 0.002101
+error: 0.000074
+error: 0.000271
+error: 0.004804
+error: 0.000820
+error: 0.275723
+error: 0.084056
+error: 0.062125
+error: 0.184764
+error: 0.329316
+EPOCH 44 ...
+Validation Accuracy = 0.909
+
+error: 0.012924
+error: 0.003205
+error: 0.001406
+error: 0.003809
+error: 0.114393
+error: 0.000005
+error: 0.058840
+error: 0.118461
+error: 0.062342
+error: 0.000306
+error: 0.000165
+EPOCH 45 ...
+Validation Accuracy = 0.899
+
+error: 0.081117
+error: 0.058769
+error: 0.000006
+error: 0.000112
+error: 0.019464
+error: 0.000096
+error: 0.007355
+error: 0.000169
+error: 0.059397
+error: 0.000012
+error: 0.035582
+EPOCH 46 ...
+Validation Accuracy = 0.917
+
+error: 0.095898
+error: 0.000652
+error: 0.019180
+error: 0.058779
+error: 0.004379
+error: 0.010794
+error: 0.091120
+error: 0.000433
+error: 0.003373
+error: 0.062838
+error: 0.112099
+EPOCH 47 ...
+Validation Accuracy = 0.916
+
+error: 0.059395
+error: 0.002306
+error: 0.076546
+error: 0.117837
+error: 0.004151
+error: 0.021436
+error: 0.000251
+error: 0.141463
+error: 0.000294
+error: 0.060312
+error: 0.004371
+EPOCH 48 ...
+Validation Accuracy = 0.908
+
+error: 0.000001
+error: 0.002338
+error: 0.000001
+error: 0.013818
+error: 0.534234
+error: 0.000042
+error: 0.159302
+error: 0.090664
+error: 0.087013
+error: 0.000075
+error: 0.058964
+EPOCH 49 ...
+Validation Accuracy = 0.919
+
+error: 0.013421
+error: 0.060965
+error: 0.000003
+error: 0.000267
+error: 0.058915
+error: 0.000447
+error: 0.060261
+error: 0.000045
+error: 0.058770
+error: 0.002409
+EPOCH 50 ...
+Model saved: ./aaronet_lr_0005_l1_48_l2_96_l3_192_l4_96_e_50_bat_64
+Validation Accuracy = 0.913
+
+error: 0.000090
+error: 0.000009
+error: 0.014769
+error: 0.003625
+error: 0.000004
+error: 0.009258
+error: 0.058832
+error: 0.130251
+error: 0.000020
+error: 0.156800
+error: 0.058880
+EPOCH 51 ...
+Validation Accuracy = 0.903
+
+error: 0.037198
+error: 0.000835
+error: 0.000272
+error: 0.000000
+error: 0.093597
+error: 0.053958
+error: 0.004919
+error: 0.001802
+error: 0.000021
+error: 0.005988
+error: 0.065885
+EPOCH 52 ...
+Validation Accuracy = 0.912
+
+error: 0.072605
+error: 0.000048
+error: 0.266281
+error: 0.009731
+error: 0.058769
+error: 0.018106
+error: 0.000001
+error: 0.058769
+error: 0.000020
+error: 0.060901
+error: 0.000040
+EPOCH 53 ...
+Validation Accuracy = 0.907
+
+error: 0.059009
+error: 0.001549
+error: 0.000103
+error: 0.058784
+error: 0.000121
+error: 0.000023
+error: 0.059774
+error: 0.000463
+error: 0.073463
+error: 0.070299
+error: 0.060615
+EPOCH 54 ...
+Validation Accuracy = 0.909
+
+error: 0.000107
+error: 0.000005
+error: 0.000113
+error: 0.000002
+error: 0.000000
+error: 0.003845
+error: 0.100591
+error: 0.001627
+error: 0.227425
+error: 0.117802
+error: 0.000471
+EPOCH 55 ...
+Validation Accuracy = 0.927
+
+error: 0.000053
+error: 0.003565
+error: 0.151659
+error: 0.000018
+error: 0.060660
+error: 0.066803
+error: 0.074300
+error: 0.000015
+error: 0.000005
+error: 0.000144
+error: 0.000719
+EPOCH 56 ...
+Validation Accuracy = 0.927
+
+error: 0.000210
+error: 0.000245
+error: 0.038105
+error: 0.000121
+error: 0.000000
+error: 0.001443
+error: 0.000129
+error: 0.043316
+error: 0.064571
+error: 0.002502
+error: 0.061904
+EPOCH 57 ...
+Validation Accuracy = 0.919
+
+error: 0.117544
+error: 0.072423
+error: 0.058997
+error: 0.000001
+error: 0.000000
+error: 0.009452
+error: 0.000000
+error: 0.058777
+error: 0.006420
+error: 0.000527
+error: 0.000479
+EPOCH 58 ...
+Validation Accuracy = 0.912
+
+error: 0.004158
+error: 0.059192
+error: 0.067232
+error: 0.145993
+error: 0.058876
+error: 0.058821
+error: 0.000047
+error: 0.001327
+error: 0.000275
+error: 0.058769
+EPOCH 59 ...
+Validation Accuracy = 0.915
+
+error: 0.000000
+error: 0.060146
+error: 0.000000
+error: 0.002245
+error: 0.000026
+error: 0.117663
+error: 0.062622
+error: 0.000023
+error: 0.013523
+error: 0.001558
+error: 0.000034
+EPOCH 60 ...
+Model saved: ./aaronet_lr_0005_l1_48_l2_96_l3_192_l4_96_e_60_bat_64
+Validation Accuracy = 0.903
+
+error: 0.001041
+error: 0.000221
+error: 0.079412
+error: 0.293341
+error: 0.000005
+error: 0.000000
+error: 0.201044
+error: 0.060958
+error: 0.008733
+error: 0.000792
+error: 0.023652
+EPOCH 61 ...
+Validation Accuracy = 0.915
+
+error: 0.000007
+error: 0.132666
+error: 0.071495
+error: 0.019801
+error: 0.000003
+error: 0.006051
+error: 0.058951
+error: 0.010823
+error: 0.000781
+error: 0.005620
+error: 0.009307
+EPOCH 62 ...
+Validation Accuracy = 0.921
+
+error: 0.178317
+error: 0.000020
+error: 0.000038
+error: 0.061159
+error: 0.117538
+error: 0.001302
+error: 0.061009
+error: 0.055696
+error: 0.000076
+error: 0.081149
+error: 0.257078
+EPOCH 63 ...
+Validation Accuracy = 0.911
+
+error: 0.230821
+error: 0.000000
+error: 0.024605
+error: 0.000048
+error: 0.029249
+error: 0.062455
+error: 0.000056
+error: 0.000000
+error: 0.010689
+error: 0.002010
+error: 0.086108
+EPOCH 64 ...
+Validation Accuracy = 0.921
+
+error: 0.000167
+error: 0.000018
+error: 0.233384
+error: 0.006389
+error: 0.117538
+error: 0.059254
+error: 0.208665
+error: 0.062685
+error: 0.000032
+error: 0.000097
+error: 0.001029
+EPOCH 65 ...
+Validation Accuracy = 0.928
+
+error: 0.000000
+error: 0.000000
+error: 0.020709
+error: 0.001016
+error: 0.000129
+error: 0.026121
+error: 0.000002
+error: 0.037964
+error: 0.000000
+error: 0.004577
+error: 0.000040
+EPOCH 66 ...
+Validation Accuracy = 0.908
+
+error: 0.000505
+error: 0.000055
+error: 0.058772
+error: 0.000015
+error: 0.333589
+error: 0.000005
+error: 0.058769
+error: 0.048610
+error: 0.010562
+error: 0.000015
+EPOCH 67 ...
+Validation Accuracy = 0.917
+
+error: 0.000001
+error: 0.263516
+error: 0.050279
+error: 0.059373
+error: 0.000002
+error: 0.058837
+error: 0.058770
+error: 0.000003
+error: 0.126347
+error: 0.000000
+error: 0.000001
+EPOCH 68 ...
+Validation Accuracy = 0.917
+
+error: 0.000354
+error: 0.063382
+error: 0.000045
+error: 0.062622
+error: 0.000000
+error: 0.000106
+error: 0.000601
+error: 0.007280
+error: 0.058826
+error: 0.000001
+error: 0.000609
+EPOCH 69 ...
+Validation Accuracy = 0.929
+
+error: 0.058775
+error: 0.058769
+error: 0.000022
+error: 0.058771
+error: 0.058770
+error: 0.000471
+error: 0.000397
+error: 0.112260
+error: 0.047575
+error: 0.000317
+error: 0.118037
+EPOCH 70 ...
+Model saved: ./aaronet_lr_0005_l1_48_l2_96_l3_192_l4_96_e_70_bat_64
+Validation Accuracy = 0.930
