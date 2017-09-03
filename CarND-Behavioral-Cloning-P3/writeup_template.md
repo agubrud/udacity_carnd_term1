@@ -18,13 +18,16 @@ The goals / steps of this project are the following:
 
 [//]: # (Image References)
 
-[image1]: ./examples/placeholder.png "Model Visualization"
-[image2]: ./examples/placeholder.png "Grayscaling"
-[image3]: ./examples/placeholder_small.png "Recovery Image"
-[image4]: ./examples/placeholder_small.png "Recovery Image"
-[image5]: ./examples/placeholder_small.png "Recovery Image"
+[center_driving]: ./examples/center_2017_08_27_21_25_27_117.jpg "Center lane driving"
+[center_driving_cropped]: ./examples/center_2017_08_27_21_25_27_117_cropped.jpg "Center lane driving cropped"
+[recovery_1]: ./examples/center_2017_08_27_21_28_49_482.jpg "Recovery sequence, number 1"
+[recovery_2]: ./examples/center_2017_08_27_21_28_50_245.jpg "Recovery sequence, number 2"
+[recovery_3]: ./examples/center_2017_08_27_21_28_52_003.jpg "Recovery sequence, number 3"
 [image6]: ./examples/placeholder_small.png "Normal Image"
 [image7]: ./examples/placeholder_small.png "Flipped Image"
+[first_nvidia_attempt]: ./model_images/model-gold.png "First model to successfully round the test track"
+[second_nvidia_attempt]: ./model_images/model-gold-alt.png "More compact version of the nVidia architecture"
+[model_gold_alt_10_epoch]: ./examples/model-gold-alt-10-epoch.jpg "10 epochs of training on the gold alt model"
 
 ## Rubric Points
 ###Here I will consider the [rubric points](https://review.udacity.com/#!/rubrics/432/view) individually and describe how I addressed each point in my implementation.  
@@ -115,44 +118,62 @@ Due to Keras' validation_split parameter for the model.fit() function, I didn't 
 
 Initially the reference nVidia architecture didn't include any droput layers but I decided to experiment with them to combat overfitting. I believe this architectural change is likely one of the biggest contributors to my ability to trim back filter depth at each convolutional layer and still allow the model to generalize.
 
-Then I ...
-
-The final step was to run the simulator to see how well the car was driving around track one. There were a few spots where the vehicle fell off the track... to improve the driving behavior in these cases, I ....
-
 At the end of the process, the vehicle is able to drive autonomously around the track without leaving the road.
 
 ####2. Final Model Architecture
 
-The final model architecture (model.py lines 18-24) consisted of a convolution neural network with the following layers and layer sizes ...
+The final model architecture can be seen in model_trainer.ipynb with comments and is as follows:
+
+| Layer         		|     Description	        					|
+|:---------------------:|:---------------------------------------------:|
+| Input         		| 320x160x3 (WxHxD) normalized RGB image   							|
+| Convolution 5x5     	| 2x2 stride, valid padding, outputs 156x76x12 	|
+| RELU					|												|
+| Convolution 5x5	    | 2x2 stride, valid padding, outputs 74x34x18     									|
+| RELU					|												|
+| Convolution 5x5	    | 2x2 stride, valid padding, outputs 33x13x24     									|
+| RELU					|												|
+| Convolution 3x3	    | 1x1 stride, valid padding, outputs 31x11x32     									|
+| RELU					|												|
+| Fully connected		| input: 10912, output:30      									|
+| Fully connected		| input: 30, output:10      									|
+| Fully connected		| input: 10, output:1      									|
 
 Here is a visualization of the architecture (note: visualizing the architecture is optional according to the project rubric)
 
-![alt text][image1]
+![alt text][second_nvidia_attempt]
+
+The above version was implemented after an initial attempt which just copied the nVidia architecture. The initial attempt is captured below.
+
+![alt text][first_nvidia_attempt]
+
+Code to generate these visualizations can be found in model_trainer.ipynb. Let the record show that I went out of my way to get these visualizations and I'm pretty disappointed in them... Was hoping for something like the Netscope project (http://ethereon.github.io/netscope/quickstart.html). If I can port the network description to Caffe quickly I might link to that instead...
 
 ####3. Creation of the Training Set & Training Process
 
 To capture good driving behavior, I first recorded two laps on track one using center lane driving. Here is an example image of center lane driving:
 
-![alt text][image2]
+![alt text][center_driving]
 
-I then recorded the vehicle recovering from the left side and right sides of the road back to center so that the vehicle would learn to .... These images show what a recovery looks like starting from ... :
+I then recorded the vehicle recovering from the left side and right sides of the road back to center so that the vehicle would learn to correct its path if it gets too close to the edge of the road. These images show what a recovery looks like starting from the right side of the road and coming back to the center:
 
-![alt text][image3]
-![alt text][image4]
-![alt text][image5]
+![alt text][recovery_1] ![alt text][recovery_2] ![alt text][recovery_3]
 
-Then I repeated this process on track two in order to get more data points.
+I did a lap repeating this process in addition to a lap of center lane driving.
 
-To augment the data sat, I also flipped images and angles thinking that this would ... For example, here is an image that has then been flipped:
+As mentioned earlier, each training image is also flipped and the both the original and flipped versions constitute the training set. The steering angle list is augmented similarly, mutliplying the measurement by -1.0 to account for the flipping. To augment the data sat, I also flipped images and angles thinking that this would help the model generalize and not over-learn making left hand turns for instance since there is a bias in the track for left vs. right turns.
 
-![alt text][image6]
-![alt text][image7]
+I mentioned earlier that each input image was cropped. An example of before and after can be seen below:
 
-Etc ....
+![alt text][center_driving]
+![alt text][center_driving_cropped]
 
-After the collection process, I had X number of data points. I then preprocessed this data by ...
+After the collection process, I had 6923 number of data points. I did not do any preprocessing on the data aside from the flipping and cropping augmenting steps I listed previously. With the flipping preprocessing doubling my training set, I arrive at 13,846 training examples.
 
+I did not explicitly separate my training set, but I did use the "validation_split" parameter in Keras' model.fit() function to allocate 30% of my training set for validation purposes.
 
-I finally randomly shuffled the data set and put Y% of the data into a validation set.
+I used this training data for training the model. The validation set helped determine if the model was over or under fitting. Through playing with different epoch values, I found that 10 was a suitable number. Looking at the MSE for training and validation sets across the epochs, improvements seem to level off at around the 10 epoch point. Since I used an ADAM optimizer, tuning the learning rate hyper parameter wasn't necessary.
 
-I used this training data for training the model. The validation set helped determine if the model was over or under fitting. The ideal number of epochs was Z as evidenced by ... I used an adam optimizer so that manually training the learning rate wasn't necessary.
+![alt text][model_gold_alt_10_epoch]
+
+We do see at the end here that the training set does appear to improve with each pass, but the validation set is not following at the same rate which suggests overfitting. This makes 10 epochs a good place to stop so the model does not continue any more on this path.
