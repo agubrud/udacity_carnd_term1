@@ -28,6 +28,7 @@ The goals / steps of this project are the following:
 [first_nvidia_attempt]: ./model_images/model-gold.png "First model to successfully round the test track"
 [second_nvidia_attempt]: ./model_images/model-gold-alt.png "More compact version of the nVidia architecture"
 [model_gold_alt_10_epoch]: ./examples/model-gold-alt-10-epoch.jpg "10 epochs of training on the gold alt model"
+[model_gold_alt_vid]: ./completion_vids/run1-model-gold-alt.mp4 "10 epochs of training on the gold alt model"
 
 ## Rubric Points
 ###Here I will consider the [rubric points](https://review.udacity.com/#!/rubrics/432/view) individually and describe how I addressed each point in my implementation.  
@@ -183,3 +184,5 @@ I used this training data for training the model. The validation set helped dete
 ![alt text][model_gold_alt_10_epoch]
 
 We do see at the end here that the training set does appear to improve with each pass, but the validation set is not following at the same rate which suggests overfitting. This makes 10 epochs a good place to stop so the model does not continue any more on this path.
+
+Completion of the test track using the model-gold-alt model is in ./completion_vids/. For reference, completion using the original gold model (directly from nVidia's architecture) is in there. Both perform similarly.
