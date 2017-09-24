@@ -23,6 +23,7 @@ The goals / steps of this project are the following:
 [road_perspective_corners]: ./output_images/examples/example_perspective_corners_test6.jpg "Test 6, Road With Perspective Warp Target Points"
 [road_perspective_unwarp]: ./output_images/examples/example_perspective_unwarped_test6.jpg "Test 6, Road Unwarped"
 [road_threshold]: ./output_images/examples/example_thresholded_test6.jpg "Test 6, HLS Threshold"
+[road_threshold_sobel]: ./output_images/examples/example_thresholded_challenge_dark.jpg "Test 6, Sobel Threshold"
 [road_lines]: ./output_images/examples/example_lines_test6.jpg "Test 6, Lines"
 [image3]: ./examples/binary_combo_example.jpg "Binary Example"
 [image4]: ./examples/warped_straight_lines.jpg "Warp Example"
@@ -109,6 +110,10 @@ If the saturation channel is < 32 and the lightness channel is >= 85% of the max
 Since the region of interest has already been restricted to the road in front of the car, the saturation and lightness thresholding proves pretty effective. In fact, with this thresholding alone, I get satisfying results from all of the provided test images. Where I do get into trouble, though, is areas with inconsistent lighting (e.g. particularly light or dark images). Continuing with the example image, here is the region of interest with HLS thresholding:
 
 ![alt text][road_threshold]
+
+Since my pipeline does struggle with difficult lighting scenarios, I fall back to an edge-detection based thresholding method when HLS thresholding doesn't produce enough lane line guesses. This is less ideal because it's noisier, as seen in this example:
+
+![alt text][road_threshold_sobel]
 
 #### 4. Describe how (and identify where in your code) you identified lane-line pixels and fit their positions with a polynomial?
 
