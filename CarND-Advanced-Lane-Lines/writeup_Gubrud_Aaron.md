@@ -62,13 +62,13 @@ You can see in the resulting figure that the distortion has been corrected.
 To demonstrate this step, I will describe how I apply the distortion correction to one of the test images like this one:
 ![alt text][road_orig]
 
-Since I already have the distortion characterized with the variables `mtx` and `dst` (which hold the camera matrix and the distortion coefficients respectively), I can simply provide the image I want to undistort along with these variables to the `cv2.undistort()` function. From this operation, I get the below undistorted road image. (It looks the same unless you a/b them on top of each other but I promise they're different :) ). You can see this in line 23 of code cell 12.
+Since I already have the distortion characterized with the variables `mtx` and `dst` (which hold the camera matrix and the distortion coefficients respectively), I can simply provide the image I want to undistort along with these variables to the `cv2.undistort()` function. From this operation, I get the below undistorted road image. (It looks the same unless you a/b them on top of each other but I promise they're different :) ). You can see this in line 23 of code cell 11.
 
 ![alt text][road_undist]
 
 #### 2. Describe how (and identify where in your code) you performed a perspective transform and provide an example of a transformed image.
 
-I decided to do the perspective transform after undistorting the image because it makes sense to me to restrict the region of interest as early as possible. The code for my perspective transform includes a function called `corners_unwarp`, which appears in code cell 8.  The `corners_unwarp` function takes as inputs an image (`img`), as well as the polygon corners which define my region of interest (`corners`).  I chose the hardcode the corners as follows:
+I decided to do the perspective transform after undistorting the image because it makes sense to me to restrict the region of interest as early as possible. The code for my perspective transform includes a function called `corners_unwarp`, which appears in code cell 7.  The `corners_unwarp` function takes as inputs an image (`img`), as well as the polygon corners which define my region of interest (`corners`).  I chose the hardcode the corners as follows:
 
 ```python
 corners = np.float32(
@@ -100,7 +100,7 @@ I verified that my perspective transform was working as expected by drawing the 
 
 #### 3. Describe how (and identify where in your code) you used color transforms, gradients or other methods to create a thresholded binary image.  Provide an example of a binary image result.
 
-My thresholding pipeline takes place in the `pipeline` function in code cell 7. I got a lot of mileage from just converting the input image to the HSL color space with OpenCV and just doing thresholding on those values. I investigated some common characteristics of the test images we were provided and defined the following rules:
+My thresholding pipeline takes place in the `pipeline` function in code cell 6. I got a lot of mileage from just converting the input image to the HSL color space with OpenCV and just doing thresholding on those values. I investigated some common characteristics of the test images we were provided and defined the following rules:
 
 If the saturation channel is >= 90 and the lightness channel is >= 100, then we can consider this of interest (a yellow line).
 If the saturation channel is < 32 and the lightness channel is >= 85% of the max lightness in the region, then we can consider this of interest as well (a white line).
@@ -117,7 +117,7 @@ Also noticeable with this transform is my choice to mask out a region in the low
 
 #### 4. Describe how (and identify where in your code) you identified lane-line pixels and fit their positions with a polynomial?
 
-To sort out the polynomial fitting, I followed the guidance of the instructional videos for this project. This happens in the function called `compute_lane_line_polynomials` which lives in code cell 10 and takes in the binary thresholded representation of the image. With the binary thresholded image, I start with a histogram of the columns of the image data. The peaks of this histogram data provide the starting points for the line approximation. From there, I use a sliding window to find where to continuation of the left and right lines lie as I move upwards in the frame. I chose to stick with the project video's suggested 9 vertical windows. I also tried playing a bit with the minimum number of pixels required to recenter the window, eventually settling on 100.
+To sort out the polynomial fitting, I followed the guidance of the instructional videos for this project. This happens in the function called `compute_lane_line_polynomials` which lives in code cell 9 and takes in the binary thresholded representation of the image. With the binary thresholded image, I start with a histogram of the columns of the image data. The peaks of this histogram data provide the starting points for the line approximation. From there, I use a sliding window to find where to continuation of the left and right lines lie as I move upwards in the frame. I chose to stick with the project video's suggested 9 vertical windows. I also tried playing a bit with the minimum number of pixels required to recenter the window, eventually settling on 100.
 
 This worked well for frames under ideal lighting conditions, but edge cases urged for error handling. At this point in the project, I also start using the `Line()` class, as suggested by the project's tips. I use this class to keep track of all of the x and y coordinates I've associated with the lane lines:
 
@@ -178,7 +178,7 @@ The projected line for the running example is here:
 
 #### 5. Describe how (and identify where in your code) you calculated the radius of curvature of the lane and the position of the vehicle with respect to center.
 
-The radius calculation comes in the 11th code cell of my notebook. It takes in the x and y points for the left and right lines, extracts the polynomial coefficients (with some extra pixels-to-meters conversions) and calculates the radius of the curve with the equation provided in the project materials:
+The radius calculation comes in the 10th code cell of my notebook. It takes in the x and y points for the left and right lines, extracts the polynomial coefficients (with some extra pixels-to-meters conversions) and calculates the radius of the curve with the equation provided in the project materials:
 
 ```python
 left_curverad = ((1 + (2*left_fit_cr[0]*np.max(ploty)*ym_per_pix + left_fit_cr[1])**2)**1.5) / np.absolute(2*left_fit_cr[0])
@@ -195,7 +195,7 @@ I noticed that my calculations produce results that are within an order of magni
 
 #### 6. Provide an example image of your result plotted back down onto the road such that the lane area is identified clearly.
 
-With my polygon defined and my lane measurements sorted out, I just have to display it all. I do this in the 12th code cell of my project in lines 99-134. At the end, I get the following:
+With my polygon defined and my lane measurements sorted out, I just have to display it all. I do this in the 11th code cell of my project in lines 99-134. At the end, I get the following:
 
 ![alt text][road_final]
 
@@ -207,7 +207,7 @@ With my polygon defined and my lane measurements sorted out, I just have to disp
 
 Here's a link to my video results [project_video.mp4](./output_images/project_video.mp4), [challenge_video.mp4](./output_images/challenge_video.mp4), [harder_challenge_video.mp4](./output_images/harder_challenge_video.mp4)
 
-My video pipeline is slightly different to interface with MoviePy's VideoFileClip module (fl_image specifically). The image pipeline includes more debug output that is absent from the video pipeline. The video pipeline can be found in code cell 14.
+My video pipeline is slightly different to interface with MoviePy's VideoFileClip module (fl_image specifically). The image pipeline includes more debug output that is absent from the video pipeline. The video pipeline can be found in code cell 13.
 
 ---
 
